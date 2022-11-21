@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+*{
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   box-sizing: border-box;
+}
+body{
+   font-family: 'PT Sans', sans-serif;
+   background: linear-gradient(#4958FA, #20CF4D);
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   min-height: 100vh;
+}
+.container{
+    width: 500px;
+    padding: 10px;
+}
+.heading{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.box{
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 15px 0;
+    height: 40px;
+    overflow: hidden;
+    transition: height 0.5s ease;
+}
+.box.active .box{
+    height: 110px;
+}
+
+body.active .box{
+    height: 100px;
+}
+ .active{
+    height: 100px;
+}
+.box .question{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: white;
+}
+.box .question span:last-child{
+    display: flex;
+    justify-content: right;
+    height: 100%;
+    width: 50px;
+    position: relative;
+    /*background-color: gold;*/
+}
+.box .question span:last-child i{
+    position: absolute;
+    font-size: 20px;
+    padding-right: 5px; 
+}
+span:last-child .fa-caret-up{
+    opacity: 0;
+}
+span:last-child .fa-caret-down{
+    opacity: 1;
+}
+.box .answer{
+    height: 0px;
+    padding: 0;
+    width: 100%;
+    background-color: #F1F1F1;
+    font-size: 16px;
+    transition: all 0.5s ease;
+}
+.box.active .answer{
+    height: 70px;
+    padding: 10px;
+}
+.box.active .fa-caret-up{
+    opacity: 1;
+}
+.box.active .fa-caret-down{
+    opacity: 0;
+}
